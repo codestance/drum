@@ -62,7 +62,6 @@ Snare.prototype.trigger = function(time) {
 	this.noise.stop(time + 0.2);
 };
 var snare = new Snare(context)
-// snare.trigger(now);
 
 function Hihat(context){
     this.context = context;
@@ -95,17 +94,16 @@ Hihat.prototype.trigger = function(time){
     this.gainH.gain.exponentialRampToValueAtTime(0.01, time + 0.05);
 }
 var hihat = new Hihat(context);
-// hihat.trigger(now);
 
 function playSound(e){
-	const sound = document.querySelector(`div[data-key="${e.keyCode}"]`);
+	const sound = document.querySelector(`g[data-key="${e.keyCode}"]`);
 	now = context.currentTime;
 	switch(e.keyCode){
-		case 65: kick.trigger(now)
+		case 83: snare.trigger(now)
 		break;
-		case 68: snare.trigger(now)
+		case 68: kick.trigger(now)
 		break;
-		case 83: hihat.trigger(now)
+		case 70: hihat.trigger(now)
 		break;
 		// default: return;
 	}

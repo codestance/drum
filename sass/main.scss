@@ -1,0 +1,52 @@
+@import '_reset';
+@import 'compass/css3';
+html,body{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+main{
+    flex: 1;
+}
+h1{
+    font-size: 3rem;
+    text-align: center;
+    margin: 0;
+}
+.container{
+    height: 0;
+    width: 100%;
+    position: relative;
+    padding-top: 2rem;
+}
+svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 6rem;
+    width: 100vw;
+    height: 100vh;
+    min-height: 300px;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    g{
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+.part-grey{fill:#bebebe;stroke-width:0.3;}
+.part-green{fill:#006c5e;stroke-width:0.3;}
+.part-yellow{fill:#d8ba23;stroke-width:0.3;}
+.part-black{stroke-width:0.3;}
+
+footer{
+    flex-shrink: 0;
+    padding: 0 1rem 0 1rem;
+    .author{
+        text-align: right;
+    }
+}
