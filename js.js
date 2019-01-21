@@ -96,16 +96,31 @@ Hihat.prototype.trigger = function(time){
 var hihat = new Hihat(context);
 
 function playSound(e){
-	const sound = document.querySelector(`g[data-key="${e.keyCode}"]`);
+	const sound = document.querySelector(`g[data-key="${e}"]`);
+	
 	now = context.currentTime;
-	switch(e.keyCode){
-		case 83: snare.trigger(now)
+	switch(e){
+		case "KeyS" : snare.trigger(now)
 		break;
-		case 68: kick.trigger(now)
+		case "KeyD" :
+			kick.trigger(now);
+			sound.classList.add('playing-kick');
 		break;
-		case 70: hihat.trigger(now)
+		case "KeyF" : hihat.trigger(now)
 		break;
 		// default: return;
 	}
 }
-window.addEventListener('keydown', playSound);
+window.addEventListener('keydown', e => playSound(e.code));
+window.addEventListener('click',function(e){
+	let clicked = e.target;
+	var element;
+	if (clicked.nodeName=="path"){
+		element = clicked.parentNode.dataset.key
+	}else if(clicked.nodeName=="g"){
+		element = clicked.dataset.key
+	}else{
+		return;
+	}
+	playSound(element)
+});

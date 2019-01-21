@@ -52,6 +52,11 @@ h1 {
 }
 
 /* line 18, ../sass/main.scss */
+a {
+  color: white;
+}
+
+/* line 21, ../sass/main.scss */
 .container {
   height: 0;
   width: 100%;
@@ -59,7 +64,7 @@ h1 {
   padding-top: 2rem;
 }
 
-/* line 24, ../sass/main.scss */
+/* line 27, ../sass/main.scss */
 svg {
   position: absolute;
   top: 0;
@@ -72,40 +77,87 @@ svg {
   display: block;
   margin: 0 auto;
 }
-/* line 36, ../sass/main.scss */
+/* line 39, ../sass/main.scss */
 svg g:hover {
   cursor: pointer;
 }
 
-/* line 41, ../sass/main.scss */
+/* line 44, ../sass/main.scss */
 .part-grey {
   fill: #bebebe;
   stroke-width: 0.3;
 }
 
-/* line 42, ../sass/main.scss */
+/* line 45, ../sass/main.scss */
 .part-green {
   fill: #006c5e;
   stroke-width: 0.3;
 }
 
-/* line 43, ../sass/main.scss */
+/* line 46, ../sass/main.scss */
 .part-yellow {
   fill: #d8ba23;
   stroke-width: 0.3;
 }
 
-/* line 44, ../sass/main.scss */
+/* line 47, ../sass/main.scss */
 .part-black {
   stroke-width: 0.3;
 }
 
-/* line 46, ../sass/main.scss */
+@-moz-keyframes playKick {
+  0% {
+    transform: scale(1.1);
+  }
+  90% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes playKick {
+  0% {
+    transform: scale(1.1);
+  }
+  90% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes playKick {
+  0% {
+    transform: scale(1.1);
+  }
+  90% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* line 61, ../sass/main.scss */
+.playing-kick {
+  transform-origin: center;
+  -moz-animation-name: playKick;
+  -webkit-animation-name: playKick;
+  animation-name: playKick;
+  -moz-animation-duration: 0.7s;
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+  -moz-animation-timing-function: ease-out;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+/* line 67, ../sass/main.scss */
 footer {
   flex-shrink: 0;
   padding: 0 1rem 0 1rem;
 }
-/* line 49, ../sass/main.scss */
+/* line 70, ../sass/main.scss */
 footer .author {
   text-align: right;
 }

@@ -15,6 +15,9 @@ h1{
     text-align: center;
     margin: 0;
 }
+a{
+    color: white;
+}   
 .container{
     height: 0;
     width: 100%;
@@ -43,6 +46,24 @@ svg{
 .part-yellow{fill:#d8ba23;stroke-width:0.3;}
 .part-black{stroke-width:0.3;}
 
+#kick{}
+@include keyframes(playKick){
+    0%{
+        transform: scale(1.1);
+    }
+    90%{
+        transform: scale(0.9);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.playing-kick{
+    transform-origin: center;
+    @include animation-name(playKick);
+    @include animation-duration(0.7s);
+    @include animation-timing-function(ease-out);
+}
 footer{
     flex-shrink: 0;
     padding: 0 1rem 0 1rem;
