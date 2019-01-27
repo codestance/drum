@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Kavoon");
 /* line 2, ../sass/_reset.scss */
 html, body {
   font-family: sans-serif;
@@ -28,35 +29,36 @@ a {
   cursor: pointer;
 }
 
-/* line 3, ../sass/main.scss */
+/* line 5, ../sass/main.scss */
 html, body {
   height: 100%;
+  font-family: 'Kavoon';
 }
 
-/* line 6, ../sass/main.scss */
+/* line 9, ../sass/main.scss */
 body {
   display: flex;
   flex-direction: column;
 }
 
-/* line 10, ../sass/main.scss */
+/* line 13, ../sass/main.scss */
 main {
   flex: 1;
 }
 
-/* line 13, ../sass/main.scss */
+/* line 16, ../sass/main.scss */
 h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   text-align: center;
   margin: 0;
 }
 
-/* line 18, ../sass/main.scss */
+/* line 21, ../sass/main.scss */
 a {
   color: white;
 }
 
-/* line 21, ../sass/main.scss */
+/* line 24, ../sass/main.scss */
 .container {
   height: 0;
   width: 100%;
@@ -64,7 +66,7 @@ a {
   padding-top: 2rem;
 }
 
-/* line 27, ../sass/main.scss */
+/* line 30, ../sass/main.scss */
 svg {
   position: absolute;
   top: 0;
@@ -77,40 +79,99 @@ svg {
   display: block;
   margin: 0 auto;
 }
-/* line 39, ../sass/main.scss */
+/* line 42, ../sass/main.scss */
 svg g:hover {
   cursor: pointer;
 }
 
-/* line 44, ../sass/main.scss */
+/* line 47, ../sass/main.scss */
 .part-grey {
   fill: #bebebe;
   stroke-width: 0.3;
 }
 
-/* line 45, ../sass/main.scss */
+/* line 48, ../sass/main.scss */
 .part-green {
   fill: #006c5e;
   stroke-width: 0.3;
 }
 
-/* line 46, ../sass/main.scss */
+/* line 49, ../sass/main.scss */
 .part-yellow {
   fill: #d8ba23;
   stroke-width: 0.3;
 }
 
-/* line 47, ../sass/main.scss */
+/* line 50, ../sass/main.scss */
 .part-black {
   stroke-width: 0.3;
 }
 
+@-moz-keyframes playSnare {
+  from {
+    transform: scaleY(0.98);
+  }
+  30% {
+    transform: scaleY(0.95);
+  }
+  80% {
+    transform: scaleY(0.98);
+  }
+  to {
+    transform: translateY(0);
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes playSnare {
+  from {
+    transform: scaleY(0.98);
+  }
+  30% {
+    transform: scaleY(0.95);
+  }
+  80% {
+    transform: scaleY(0.98);
+  }
+  to {
+    transform: translateY(0);
+    transform: scale(1);
+  }
+}
+@keyframes playSnare {
+  from {
+    transform: scaleY(0.98);
+  }
+  30% {
+    transform: scaleY(0.95);
+  }
+  80% {
+    transform: scaleY(0.98);
+  }
+  to {
+    transform: translateY(0);
+    transform: scale(1);
+  }
+}
+/* line 67, ../sass/main.scss */
+.playing-snare {
+  transform-origin: center;
+  -moz-animation-name: playSnare;
+  -webkit-animation-name: playSnare;
+  animation-name: playSnare;
+  -moz-animation-duration: 0.7s;
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+  -moz-animation-timing-function: ease-out;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
 @-moz-keyframes playKick {
   0% {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
   90% {
-    transform: scale(0.9);
+    transform: scale(0.95);
   }
   100% {
     transform: scale(1);
@@ -118,10 +179,10 @@ svg g:hover {
 }
 @-webkit-keyframes playKick {
   0% {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
   90% {
-    transform: scale(0.9);
+    transform: scale(0.95);
   }
   100% {
     transform: scale(1);
@@ -129,16 +190,16 @@ svg g:hover {
 }
 @keyframes playKick {
   0% {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
   90% {
-    transform: scale(0.9);
+    transform: scale(0.95);
   }
   100% {
     transform: scale(1);
   }
 }
-/* line 61, ../sass/main.scss */
+/* line 84, ../sass/main.scss */
 .playing-kick {
   transform-origin: center;
   -moz-animation-name: playKick;
@@ -152,12 +213,70 @@ svg g:hover {
   animation-timing-function: ease-out;
 }
 
-/* line 67, ../sass/main.scss */
+@-moz-keyframes playHihat {
+  from {
+    transform: rotate(-2deg);
+  }
+  25% {
+    transform: translateY(0.3rem);
+  }
+  75% {
+    transform: rotate(0);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes playHihat {
+  from {
+    transform: rotate(-2deg);
+  }
+  25% {
+    transform: translateY(0.3rem);
+  }
+  75% {
+    transform: rotate(0);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes playHihat {
+  from {
+    transform: rotate(-2deg);
+  }
+  25% {
+    transform: translateY(0.3rem);
+  }
+  75% {
+    transform: rotate(0);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+/* line 104, ../sass/main.scss */
+.playing-hihat {
+  transform-origin: 100%;
+  -moz-animation-name: playHihat;
+  -webkit-animation-name: playHihat;
+  animation-name: playHihat;
+  -moz-animation-duration: 0.7s;
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+  -moz-animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+/* line 110, ../sass/main.scss */
 footer {
   flex-shrink: 0;
   padding: 0 1rem 0 1rem;
+  z-index: 9;
+  font-size: 1.2rem;
 }
-/* line 70, ../sass/main.scss */
+/* line 115, ../sass/main.scss */
 footer .author {
   text-align: right;
 }

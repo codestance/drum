@@ -1,7 +1,10 @@
 @import '_reset';
 @import 'compass/css3';
+@import url('https://fonts.googleapis.com/css?family=Kavoon');
+
 html,body{
     height: 100%;
+    font-family: 'Kavoon';
 }
 body{
     display: flex;
@@ -11,7 +14,7 @@ main{
     flex: 1;
 }
 h1{
-    font-size: 3rem;
+    font-size: 4rem;
     text-align: center;
     margin: 0;
 }
@@ -46,13 +49,33 @@ svg{
 .part-yellow{fill:#d8ba23;stroke-width:0.3;}
 .part-black{stroke-width:0.3;}
 
-#kick{}
+@include keyframes(playSnare){
+    from{        
+        transform: scaleY(0.98);
+    }
+    30%{
+        transform: scaleY(0.95);
+    }
+    80%{
+        transform: scaleY(0.98);
+    }
+    to{
+        transform: translateY(0);
+        transform: scale(1);
+    }
+}
+.playing-snare{
+    transform-origin: center;
+    @include animation-name(playSnare);
+    @include animation-duration(0.7s);
+    @include animation-timing-function(ease-out);
+}
 @include keyframes(playKick){
     0%{
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
     90%{
-        transform: scale(0.9);
+        transform: scale(0.95);
     }
     100%{
         transform: scale(1);
@@ -64,9 +87,31 @@ svg{
     @include animation-duration(0.7s);
     @include animation-timing-function(ease-out);
 }
+@include keyframes(playHihat){
+    from{
+        transform: rotate(-2deg);
+    }
+    25%{
+        transform: translateY(.3rem);
+    }
+    75%{
+        transform: rotate(0);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+.playing-hihat{
+    transform-origin: 100%;
+    @include animation-name(playHihat);
+    @include animation-duration(0.7s);
+    @include animation-timing-function(ease-in-out);
+}
 footer{
     flex-shrink: 0;
     padding: 0 1rem 0 1rem;
+    z-index: 9;
+    font-size: 1.2rem;
     .author{
         text-align: right;
     }
