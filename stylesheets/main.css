@@ -85,20 +85,20 @@ svg g:hover {
 }
 
 /* line 47, ../sass/main.scss */
-.part-grey {
-  fill: #bebebe;
+.part-white {
+  fill: #eee3af;
   stroke-width: 0.3;
 }
 
 /* line 48, ../sass/main.scss */
-.part-green {
-  fill: #006c5e;
+.part-gold {
+  fill: #fec80d;
   stroke-width: 0.3;
 }
 
 /* line 49, ../sass/main.scss */
-.part-yellow {
-  fill: #d8ba23;
+.part-red {
+  fill: #ec1b23;
   stroke-width: 0.3;
 }
 

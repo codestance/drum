@@ -95,6 +95,13 @@ Hihat.prototype.trigger = function(time){
 }
 var hihat = new Hihat(context);
 
+function removeAnimation(instrument, clas){
+	instrument.addEventListener('animationend', function(e){
+		console.log(e.target.classList)
+		e.target.classList.remove(clas);
+	})
+}
+
 function playSound(e){
 	const sound = document.querySelector(`g[data-key="${e}"]`);
 	var paths;
@@ -103,23 +110,30 @@ function playSound(e){
 		case "KeyS" : 
 			snare.trigger(now);
 			paths = sound.querySelectorAll("path.move");
-			for(let i=0; i<paths.length; i++){
-				paths[i].classList.add('playing-snare')
-			}
+			paths.forEach(function(path){
+				// if(path.classList.contains('playing-snare')){
+				// 	path.classList.remove('playing-snare')
+				// }
+				removeAnimation(path, 'playing-snare');
+				path.classList.add('playing-snare');
+			})
 		break;
 		case "KeyD" :
 			kick.trigger(now);
-			if(sound.classList.contains('playing-kick')){
-				sound.classList.remove('playing-kick');
-			}
+			// if(sound.classList.contains('playing-kick')){
+			// 	sound.classList.remove('playing-kick');
+			// }
+			removeAnimation(sound, 'playing-kick');
 			sound.classList.add('playing-kick');
 		break;
 		case "KeyF" : 
 			hihat.trigger(now)
-			paths = sound.querySelectorAll("path.move");
-			for(let i=0; i<paths.length; i++){
-				paths[i].classList.add('playing-hihat')
-			}
+			path = sound.querySelector("path.move");
+			// if(path.classList.contains('playing-hihat')){
+			// 	path.classList.remove('playing-hihat')
+			// }
+			removeAnimation(path, 'playing-hihat');
+			path.classList.add('playing-hihat');
 		break;
 		// default: return;
 	}

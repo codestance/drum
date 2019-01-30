@@ -44,9 +44,9 @@ svg{
         }
     }
 }
-.part-grey{fill:#bebebe;stroke-width:0.3;}
-.part-green{fill:#006c5e;stroke-width:0.3;}
-.part-yellow{fill:#d8ba23;stroke-width:0.3;}
+.part-white{fill:#eee3af;stroke-width:0.3;}
+.part-gold{fill:#fec80d;stroke-width:0.3;}
+.part-red{fill:#ec1b23;stroke-width:0.3;}
 .part-black{stroke-width:0.3;}
 
 @include keyframes(playSnare){
