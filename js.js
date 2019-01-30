@@ -111,31 +111,21 @@ function playSound(e){
 			snare.trigger(now);
 			paths = sound.querySelectorAll("path.move");
 			paths.forEach(function(path){
-				// if(path.classList.contains('playing-snare')){
-				// 	path.classList.remove('playing-snare')
-				// }
 				removeAnimation(path, 'playing-snare');
 				path.classList.add('playing-snare');
 			})
 		break;
 		case "KeyD" :
 			kick.trigger(now);
-			// if(sound.classList.contains('playing-kick')){
-			// 	sound.classList.remove('playing-kick');
-			// }
 			removeAnimation(sound, 'playing-kick');
 			sound.classList.add('playing-kick');
 		break;
 		case "KeyF" : 
 			hihat.trigger(now)
 			path = sound.querySelector("path.move");
-			// if(path.classList.contains('playing-hihat')){
-			// 	path.classList.remove('playing-hihat')
-			// }
 			removeAnimation(path, 'playing-hihat');
 			path.classList.add('playing-hihat');
 		break;
-		// default: return;
 	}
 }
 window.addEventListener('keydown', e => playSound(e.code));

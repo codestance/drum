@@ -1,14 +1,14 @@
 @import '_reset';
-@import 'compass/css3';
+@import 'compass/css3/flexbox';
+@import 'compass/css3/animation';
 @import url('https://fonts.googleapis.com/css?family=Kavoon');
-
 html,body{
     height: 100%;
     font-family: 'Kavoon';
 }
 body{
-    display: flex;
-    flex-direction: column;
+    @include display-flex;
+    @include flex-direction(column);
 }
 main{
     flex: 1;
@@ -48,7 +48,6 @@ svg{
 .part-gold{fill:#fec80d;stroke-width:0.3;}
 .part-red{fill:#ec1b23;stroke-width:0.3;}
 .part-black{stroke-width:0.3;}
-
 @include keyframes(playSnare){
     from{        
         transform: scaleY(0.98);
@@ -108,7 +107,7 @@ svg{
     @include animation-timing-function(ease-in-out);
 }
 footer{
-    flex-shrink: 0;
+    @include flex-shrink(0);
     padding: 0 1rem 0 1rem;
     z-index: 9;
     font-size: 1.2rem;

@@ -37,7 +37,9 @@ html, body {
 
 /* line 9, ../sass/main.scss */
 body {
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: column;
   flex-direction: column;
 }
 
@@ -152,7 +154,7 @@ svg g:hover {
     transform: scale(1);
   }
 }
-/* line 67, ../sass/main.scss */
+/* line 66, ../sass/main.scss */
 .playing-snare {
   transform-origin: center;
   -moz-animation-name: playSnare;
@@ -199,7 +201,7 @@ svg g:hover {
     transform: scale(1);
   }
 }
-/* line 84, ../sass/main.scss */
+/* line 83, ../sass/main.scss */
 .playing-kick {
   transform-origin: center;
   -moz-animation-name: playKick;
@@ -255,7 +257,7 @@ svg g:hover {
     transform: translateY(0);
   }
 }
-/* line 104, ../sass/main.scss */
+/* line 103, ../sass/main.scss */
 .playing-hihat {
   transform-origin: 100%;
   -moz-animation-name: playHihat;
@@ -269,14 +271,15 @@ svg g:hover {
   animation-timing-function: ease-in-out;
 }
 
-/* line 110, ../sass/main.scss */
+/* line 109, ../sass/main.scss */
 footer {
+  -webkit-flex-shrink: 0;
   flex-shrink: 0;
   padding: 0 1rem 0 1rem;
   z-index: 9;
   font-size: 1.2rem;
 }
-/* line 115, ../sass/main.scss */
+/* line 114, ../sass/main.scss */
 footer .author {
   text-align: right;
 }
