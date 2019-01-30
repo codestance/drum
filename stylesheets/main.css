@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css?family=Kavoon");
+/* line 2, ../sass/_reset.scss */
+html, body {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+/* line 10, ../sass/_reset.scss */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 15, ../sass/_reset.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* line 19, ../sass/_reset.scss */
+a {
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* line 5, ../sass/main.scss */
+html, body {
+  height: 100%;
+  font-family: 'Kavoon';
+}
+
+/* line 9, ../sass/main.scss */
+body {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+/* line 13, ../sass/main.scss */
+main {
+  flex: 1;
+}
+
+/* line 16, ../sass/main.scss */
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  margin: 0;
+}
+
+/* line 21, ../sass/main.scss */
+a {
+  color: white;
+}
+
+/* line 24, ../sass/main.scss */
+.container {
+  height: 0;
+  width: 100%;
+  position: relative;
+  padding-top: 2rem;
+}
+
+/* line 30, ../sass/main.scss */
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 6rem;
+  width: 100vw;
+  height: 100vh;
+  min-height: 300px;
+  overflow: hidden;
+  display: block;
+  margin: 0 auto;
+}
+/* line 42, ../sass/main.scss */
+svg g:hover {
+  cursor: pointer;
+}
+
+/* line 47, ../sass/main.scss */
+.part-white {
+  fill: #eee3af;
+  stroke-width: 0.3;
+}
+
+/* line 48, ../sass/main.scss */
+.part-gold {
+  fill: #fec80d;
+  stroke-width: 0.3;
+}
+
+/* line 49, ../sass/main.scss */
+.part-red {
+  fill: #ec1b23;
+  stroke-width: 0.3;
+}
+
+/* line 50, ../sass/main.scss */
+.part-black {
+  stroke-width: 0.3;
+}
+
+@-moz-keyframes playSnare {
+  from {
+    transform: scaleY(0.98);
+  }
+  30% {
+    transform: scaleY(0.95);
+  }
+  80% {
+    transform: scaleY(0.98);
+  }
+  to {
+    transform: translateY(0);
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes playSnare {
+  from {
+    transform: scaleY(0.98);
+  }
+  30% {
+    transform: scaleY(0.95);
+  }
+  80% {
+    transform: scaleY(0.98);
+  }
+  to {
+    transform: translateY(0);
+    transform: scale(1);
+  }
+}
+@keyframes playSnare {
+  from {
+    transform: scaleY(0.98);
+  }
+  30% {
+    transform: scaleY(0.95);
+  }
+  80% {
+    transform: scaleY(0.98);
+  }
+  to {
+    transform: translateY(0);
+    transform: scale(1);
+  }
+}
+/* line 66, ../sass/main.scss */
+.playing-snare {
+  transform-origin: center;
+  -moz-animation-name: playSnare;
+  -webkit-animation-name: playSnare;
+  animation-name: playSnare;
+  -moz-animation-duration: 0.7s;
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+  -moz-animation-timing-function: ease-out;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+@-moz-keyframes playKick {
+  0% {
+    transform: scale(1.05);
+  }
+  90% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes playKick {
+  0% {
+    transform: scale(1.05);
+  }
+  90% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes playKick {
+  0% {
+    transform: scale(1.05);
+  }
+  90% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* line 83, ../sass/main.scss */
+.playing-kick {
+  transform-origin: center;
+  -moz-animation-name: playKick;
+  -webkit-animation-name: playKick;
+  animation-name: playKick;
+  -moz-animation-duration: 0.7s;
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+  -moz-animation-timing-function: ease-out;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+@-moz-keyframes playHihat {
+  from {
+    transform: rotate(-2deg);
+  }
+  25% {
+    transform: translateY(0.3rem);
+  }
+  75% {
+    transform: rotate(0);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes playHihat {
+  from {
+    transform: rotate(-2deg);
+  }
+  25% {
+    transform: translateY(0.3rem);
+  }
+  75% {
+    transform: rotate(0);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes playHihat {
+  from {
+    transform: rotate(-2deg);
+  }
+  25% {
+    transform: translateY(0.3rem);
+  }
+  75% {
+    transform: rotate(0);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+/* line 103, ../sass/main.scss */
+.playing-hihat {
+  transform-origin: 100%;
+  -moz-animation-name: playHihat;
+  -webkit-animation-name: playHihat;
+  animation-name: playHihat;
+  -moz-animation-duration: 0.7s;
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+  -moz-animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+/* line 109, ../sass/main.scss */
+footer {
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  padding: 0 1rem 0 1rem;
+  z-index: 9;
+  font-size: 1.2rem;
+}
+/* line 114, ../sass/main.scss */
+footer .author {
+  text-align: right;
+}
