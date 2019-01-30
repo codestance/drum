@@ -33,9 +33,11 @@ a {
 html, body {
   height: 100%;
   font-family: 'Kavoon';
+  font-size: 1rem;
+  background-color: #646c64;
 }
 
-/* line 9, ../sass/main.scss */
+/* line 11, ../sass/main.scss */
 body {
   display: -webkit-flex;
   display: flex;
@@ -43,24 +45,30 @@ body {
   flex-direction: column;
 }
 
-/* line 13, ../sass/main.scss */
+/* line 15, ../sass/main.scss */
 main {
   flex: 1;
 }
 
-/* line 16, ../sass/main.scss */
+/* line 18, ../sass/main.scss */
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   text-align: center;
   margin: 0;
 }
+@media screen and (min-width: 900px) {
+  /* line 18, ../sass/main.scss */
+  h1 {
+    font-size: 4rem;
+  }
+}
 
-/* line 21, ../sass/main.scss */
+/* line 26, ../sass/main.scss */
 a {
   color: white;
 }
 
-/* line 24, ../sass/main.scss */
+/* line 29, ../sass/main.scss */
 .container {
   height: 0;
   width: 100%;
@@ -68,7 +76,7 @@ a {
   padding-top: 2rem;
 }
 
-/* line 30, ../sass/main.scss */
+/* line 35, ../sass/main.scss */
 svg {
   position: absolute;
   top: 0;
@@ -81,30 +89,30 @@ svg {
   display: block;
   margin: 0 auto;
 }
-/* line 42, ../sass/main.scss */
+/* line 47, ../sass/main.scss */
 svg g:hover {
   cursor: pointer;
 }
 
-/* line 47, ../sass/main.scss */
+/* line 52, ../sass/main.scss */
 .part-white {
   fill: #eee3af;
   stroke-width: 0.3;
 }
 
-/* line 48, ../sass/main.scss */
+/* line 53, ../sass/main.scss */
 .part-gold {
   fill: #fec80d;
   stroke-width: 0.3;
 }
 
-/* line 49, ../sass/main.scss */
+/* line 54, ../sass/main.scss */
 .part-red {
   fill: #ec1b23;
   stroke-width: 0.3;
 }
 
-/* line 50, ../sass/main.scss */
+/* line 55, ../sass/main.scss */
 .part-black {
   stroke-width: 0.3;
 }
@@ -154,7 +162,7 @@ svg g:hover {
     transform: scale(1);
   }
 }
-/* line 66, ../sass/main.scss */
+/* line 71, ../sass/main.scss */
 .playing-snare {
   transform-origin: center;
   -moz-animation-name: playSnare;
@@ -201,7 +209,7 @@ svg g:hover {
     transform: scale(1);
   }
 }
-/* line 83, ../sass/main.scss */
+/* line 88, ../sass/main.scss */
 .playing-kick {
   transform-origin: center;
   -moz-animation-name: playKick;
@@ -257,7 +265,7 @@ svg g:hover {
     transform: translateY(0);
   }
 }
-/* line 103, ../sass/main.scss */
+/* line 108, ../sass/main.scss */
 .playing-hihat {
   transform-origin: 100%;
   -moz-animation-name: playHihat;
@@ -271,7 +279,7 @@ svg g:hover {
   animation-timing-function: ease-in-out;
 }
 
-/* line 109, ../sass/main.scss */
+/* line 114, ../sass/main.scss */
 footer {
   -webkit-flex-shrink: 0;
   flex-shrink: 0;
@@ -279,7 +287,17 @@ footer {
   z-index: 9;
   font-size: 1.2rem;
 }
-/* line 114, ../sass/main.scss */
+/* line 119, ../sass/main.scss */
+footer .instructions {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  /* line 119, ../sass/main.scss */
+  footer .instructions {
+    display: block;
+  }
+}
+/* line 125, ../sass/main.scss */
 footer .author {
   text-align: right;
 }
