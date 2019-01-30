@@ -5,6 +5,8 @@
 html,body{
     height: 100%;
     font-family: 'Kavoon';
+    font-size: 1rem;
+    background-color: #646c64;
 }
 body{
     @include display-flex;
@@ -14,9 +16,12 @@ main{
     flex: 1;
 }
 h1{
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: center;
     margin: 0;
+    @media screen and (min-width: 900px){
+        font-size: 4rem;
+    }
 }
 a{
     color: white;
@@ -111,6 +116,12 @@ footer{
     padding: 0 1rem 0 1rem;
     z-index: 9;
     font-size: 1.2rem;
+    .instructions{
+        display: none;
+        @media screen and (min-width: 1024px){
+            display: block;
+        }
+    }
     .author{
         text-align: right;
     }
